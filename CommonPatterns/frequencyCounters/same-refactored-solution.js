@@ -8,6 +8,7 @@ function same = (arrOne, arrTwo) {
         }, true)
 }
 
+// The course suggested two separate loops which is O(n) but more verbose
 function suggestedByCourse(arr1, arr2){
     if(arr1.length !== arr2.length){
         return false;
