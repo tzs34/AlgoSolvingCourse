@@ -1,4 +1,14 @@
-function same(arr1, arr2){
+function same = (arrOne, arrTwo) {
+    
+    if(arrOne.length !== arrTwo.length){
+            return false;
+    }
+    return arrOne.reduce((acc, value, index) =>{
+        arrTwo[index] === value ** 2 // this is quickest way to square a number
+        }, true)
+}
+
+function suggestedByCourse(arr1, arr2){
     if(arr1.length !== arr2.length){
         return false;
     }
