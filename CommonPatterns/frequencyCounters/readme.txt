@@ -7,10 +7,10 @@ write a function called same which accepts 2 arrays and returns true if every va
 in array one has a corresponding bvalue (at same index) which is the squared value of it.
 
 e.g
-[1,2,3] [2,4,6] // true
+[1,2,3] [2,4,9] // true
 [1,2,3] [2,4,100] // false
 
-A naive approach: Loop and splice ensure 0(n2)
+A naive approach: Loop and nested indexOf ensure 0(n2)
 
 function same(arr1, arr2){
     if(arr1.length !== arr2.length){
@@ -21,7 +21,6 @@ function same(arr1, arr2){
         if(correctIndex === -1) {
             return false;
         }
-        console.log(arr2);
         arr2.splice(correctIndex,1) 
     }
     return true;
@@ -40,6 +39,7 @@ function same = (arrOne, arrTwo) {
         }, true)
 }
 
-
+Note gertting an element by inex is o(1) , and comparing is a const so ignore . Reduce isequivilent to one loop . 
+Therefore o(n)
 
 Can avoid O(n2) , like nested loops for strings or arrays
