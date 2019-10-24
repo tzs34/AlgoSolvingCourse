@@ -8,5 +8,5 @@ function countUnique (arr){
 
         }
     } 
-    return arr.slice(0, i+1).length
+    return  i+1
 }
